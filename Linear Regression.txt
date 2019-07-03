@@ -1,0 +1,393 @@
+
+> x = c(coefficients(lm.zn)[2],
++       coefficients(lm.indus)[2],
++       coefficients(lm.chas)[2],
++       coefficients(lm.nox)[2],
++       coefficients(lm.rm)[2],
++       coefficients(lm.age)[2],
++       coefficients(lm.dis)[2],
++       coefficients(lm.rad)[2],
++       coefficients(lm.tax)[2],
++       coefficients(lm.ptratio)[2],
++       coefficients(lm.black)[2],
++       coefficients(lm.lstat)[2],
++       coefficients(lm.medv)[2])
+> x = c(coefficients(lm.zn)[2],
++       coefficients(lm.indus)[2],
++       coefficients(lm.chas)[2],
++       coefficients(lm.nox)[2],
++       coefficients(lm.rm)[2],
++       coefficients(lm.age)[2],
++       coefficients(lm.dis)[2],
++       coefficients(lm.rad)[2],
++       coefficients(lm.tax)[2],
++       coefficients(lm.ptratio)[2],
++       coefficients(lm.black)[2],
++       coefficients(lm.lstat)[2],
++       coefficients(lm.medv)[2])
+> y = coefficients(lm.todos)[2:14]
+> plot(x, y)
+> plot(x, y)
+> 
+> 
+> 
+> lm.zn = lm(crim~poly(zn,3))
+> summary(lm.zn)
+
+Call:
+lm(formula = crim ~ poly(zn, 3))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-4.821 -4.614 -1.294  0.473 84.130 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    3.6135     0.3722   9.709  < 2e-16 ***
+poly(zn, 3)1 -38.7498     8.3722  -4.628  4.7e-06 ***
+poly(zn, 3)2  23.9398     8.3722   2.859  0.00442 ** 
+poly(zn, 3)3 -10.0719     8.3722  -1.203  0.22954    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.372 on 502 degrees of freedom
+Multiple R-squared:  0.05824,	Adjusted R-squared:  0.05261 
+F-statistic: 10.35 on 3 and 502 DF,  p-value: 1.281e-06
+
+> lm.indus=lm(crim~poly(indus,3))
+> summary(lm.indus)
+
+Call:
+lm(formula = crim ~ poly(indus, 3))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-8.278 -2.514  0.054  0.764 79.713 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        3.614      0.330  10.950  < 2e-16 ***
+poly(indus, 3)1   78.591      7.423  10.587  < 2e-16 ***
+poly(indus, 3)2  -24.395      7.423  -3.286  0.00109 ** 
+poly(indus, 3)3  -54.130      7.423  -7.292  1.2e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.423 on 502 degrees of freedom
+Multiple R-squared:  0.2597,	Adjusted R-squared:  0.2552 
+F-statistic: 58.69 on 3 and 502 DF,  p-value: < 2.2e-16
+
+> lm.chas=(lm(crim~poly(chas,3))
++ lm.nox.=lm(crim~poly(nox,3))
+Error: unexpected symbol in:
+"lm.chas=(lm(crim~poly(chas,3))
+lm.nox."
+> lm.chas=(lm(crim~poly(chas,3))
++ lm.nox.=lm(crim~poly(nox,3))
+Error: unexpected symbol in:
+"lm.chas=(lm(crim~poly(chas,3))
+lm.nox."
+> lm.chas=(lm(crim~poly(chas,3))
++ summary(lm.chas)
+Error: unexpected symbol in:
+"lm.chas=(lm(crim~poly(chas,3))
+summary"
+> lm.nox.=lm(crim~poly(nox,3))
+> summary(lm.nox)
+
+Call:
+lm(formula = crim ~ nox)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-12.371  -2.738  -0.974   0.559  81.728 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -13.720      1.699  -8.073 5.08e-15 ***
+nox           31.249      2.999  10.419  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.81 on 504 degrees of freedom
+Multiple R-squared:  0.1772,	Adjusted R-squared:  0.1756 
+F-statistic: 108.6 on 1 and 504 DF,  p-value: < 2.2e-16
+
+> lm.rm=lm(crim~poly(rm,3))
+> summary(lm.rm)
+
+Call:
+lm(formula = crim ~ poly(rm, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-18.485  -3.468  -2.221  -0.015  87.219 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    3.6135     0.3703   9.758  < 2e-16 ***
+poly(rm, 3)1 -42.3794     8.3297  -5.088 5.13e-07 ***
+poly(rm, 3)2  26.5768     8.3297   3.191  0.00151 ** 
+poly(rm, 3)3  -5.5103     8.3297  -0.662  0.50858    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.33 on 502 degrees of freedom
+Multiple R-squared:  0.06779,	Adjusted R-squared:  0.06222 
+F-statistic: 12.17 on 3 and 502 DF,  p-value: 1.067e-07
+
+> lm.age=lm(crim~poly(rm,3))
+> summary(lm.age)
+
+Call:
+lm(formula = crim ~ poly(rm, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-18.485  -3.468  -2.221  -0.015  87.219 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    3.6135     0.3703   9.758  < 2e-16 ***
+poly(rm, 3)1 -42.3794     8.3297  -5.088 5.13e-07 ***
+poly(rm, 3)2  26.5768     8.3297   3.191  0.00151 ** 
+poly(rm, 3)3  -5.5103     8.3297  -0.662  0.50858    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.33 on 502 degrees of freedom
+Multiple R-squared:  0.06779,	Adjusted R-squared:  0.06222 
+F-statistic: 12.17 on 3 and 502 DF,  p-value: 1.067e-07
+
+> lm.dis = lm(crim~poly(dis,3))
+> summary(lm.dis) 
+
+Call:
+lm(formula = crim ~ poly(dis, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-10.757  -2.588   0.031   1.267  76.378 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     3.6135     0.3259  11.087  < 2e-16 ***
+poly(dis, 3)1 -73.3886     7.3315 -10.010  < 2e-16 ***
+poly(dis, 3)2  56.3730     7.3315   7.689 7.87e-14 ***
+poly(dis, 3)3 -42.6219     7.3315  -5.814 1.09e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.331 on 502 degrees of freedom
+Multiple R-squared:  0.2778,	Adjusted R-squared:  0.2735 
+F-statistic: 64.37 on 3 and 502 DF,  p-value: < 2.2e-16
+
+> lm.rad = lm(crim~poly(rad,3))
+> summary(lm.rad)
+
+Call:
+lm(formula = crim ~ poly(rad, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-10.381  -0.412  -0.269   0.179  76.217 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     3.6135     0.2971  12.164  < 2e-16 ***
+poly(rad, 3)1 120.9074     6.6824  18.093  < 2e-16 ***
+poly(rad, 3)2  17.4923     6.6824   2.618  0.00912 ** 
+poly(rad, 3)3   4.6985     6.6824   0.703  0.48231    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.682 on 502 degrees of freedom
+Multiple R-squared:    0.4,	Adjusted R-squared:  0.3965 
+F-statistic: 111.6 on 3 and 502 DF,  p-value: < 2.2e-16
+
+> lm.tax = lm(crim~poly(tax,3))
+> summary(lm.tax)
+
+Call:
+lm(formula = crim ~ poly(tax, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-13.273  -1.389   0.046   0.536  76.950 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     3.6135     0.3047  11.860  < 2e-16 ***
+poly(tax, 3)1 112.6458     6.8537  16.436  < 2e-16 ***
+poly(tax, 3)2  32.0873     6.8537   4.682 3.67e-06 ***
+poly(tax, 3)3  -7.9968     6.8537  -1.167    0.244    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.854 on 502 degrees of freedom
+Multiple R-squared:  0.3689,	Adjusted R-squared:  0.3651 
+F-statistic:  97.8 on 3 and 502 DF,  p-value: < 2.2e-16
+
+> lm.ptratio = lm(crim~poly(ptratio,3))
+> summary(lm.ptratio)
+
+Call:
+lm(formula = crim ~ poly(ptratio, 3))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-6.833 -4.146 -1.655  1.408 82.697 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          3.614      0.361  10.008  < 2e-16 ***
+poly(ptratio, 3)1   56.045      8.122   6.901 1.57e-11 ***
+poly(ptratio, 3)2   24.775      8.122   3.050  0.00241 ** 
+poly(ptratio, 3)3  -22.280      8.122  -2.743  0.00630 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.122 on 502 degrees of freedom
+Multiple R-squared:  0.1138,	Adjusted R-squared:  0.1085 
+F-statistic: 21.48 on 3 and 502 DF,  p-value: 4.171e-13
+
+> lm.black = lm(crim~poly(black,3))
+> summary(lm.black)
+
+Call:
+lm(formula = crim ~ poly(black, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-13.096  -2.343  -2.128  -1.439  86.790 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       3.6135     0.3536  10.218   <2e-16 ***
+poly(black, 3)1 -74.4312     7.9546  -9.357   <2e-16 ***
+poly(black, 3)2   5.9264     7.9546   0.745    0.457    
+poly(black, 3)3  -4.8346     7.9546  -0.608    0.544    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.955 on 502 degrees of freedom
+Multiple R-squared:  0.1498,	Adjusted R-squared:  0.1448 
+F-statistic: 29.49 on 3 and 502 DF,  p-value: < 2.2e-16
+
+> lm.lstat = lm(crim~poly(lstat,3))
+> summary(lm.lstat)
+
+Call:
+lm(formula = crim ~ poly(lstat, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-15.234  -2.151  -0.486   0.066  83.353 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       3.6135     0.3392  10.654   <2e-16 ***
+poly(lstat, 3)1  88.0697     7.6294  11.543   <2e-16 ***
+poly(lstat, 3)2  15.8882     7.6294   2.082   0.0378 *  
+poly(lstat, 3)3 -11.5740     7.6294  -1.517   0.1299    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.629 on 502 degrees of freedom
+Multiple R-squared:  0.2179,	Adjusted R-squared:  0.2133 
+F-statistic: 46.63 on 3 and 502 DF,  p-value: < 2.2e-16
+
+> lm.medv = lm(crim~poly(medv,3))
+> summary(lm.medv)
+
+Call:
+lm(formula = crim ~ poly(medv, 3))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-24.427  -1.976  -0.437   0.439  73.655 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       3.614      0.292  12.374  < 2e-16 ***
+poly(medv, 3)1  -75.058      6.569 -11.426  < 2e-16 ***
+poly(medv, 3)2   88.086      6.569  13.409  < 2e-16 ***
+poly(medv, 3)3  -48.033      6.569  -7.312 1.05e-12 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.569 on 502 degrees of freedom
+Multiple R-squared:  0.4202,	Adjusted R-squared:  0.4167 
+F-statistic: 121.3 on 3 and 502 DF,  p-value: < 2.2e-16
+
+> model1=lm(mpg ~ horsepower,data = Auto)
+> summary(model1)
+
+Call:
+lm(formula = mpg ~ horsepower, data = Auto)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.5710  -3.2592  -0.3435   2.7630  16.9240 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 39.935861   0.717499   55.66   <2e-16 ***
+horsepower  -0.157845   0.006446  -24.49   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.906 on 390 degrees of freedom
+Multiple R-squared:  0.6059,	Adjusted R-squared:  0.6049 
+F-statistic: 599.7 on 1 and 390 DF,  p-value: < 2.2e-16
+
+> ##c 
+> plot(model1)
+> pairs(Auto)
+> cor(Auto[,-9])
+                    mpg  cylinders displacement horsepower     weight acceleration
+mpg           1.0000000 -0.7776175   -0.8051269 -0.7784268 -0.8322442    0.4233285
+cylinders    -0.7776175  1.0000000    0.9508233  0.8429834  0.8975273   -0.5046834
+displacement -0.8051269  0.9508233    1.0000000  0.8972570  0.9329944   -0.5438005
+horsepower   -0.7784268  0.8429834    0.8972570  1.0000000  0.8645377   -0.6891955
+weight       -0.8322442  0.8975273    0.9329944  0.8645377  1.0000000   -0.4168392
+acceleration  0.4233285 -0.5046834   -0.5438005 -0.6891955 -0.4168392    1.0000000
+year          0.5805410 -0.3456474   -0.3698552 -0.4163615 -0.3091199    0.2903161
+origin        0.5652088 -0.5689316   -0.6145351 -0.4551715 -0.5850054    0.2127458
+                   year     origin
+mpg           0.5805410  0.5652088
+cylinders    -0.3456474 -0.5689316
+displacement -0.3698552 -0.6145351
+horsepower   -0.4163615 -0.4551715
+weight       -0.3091199 -0.5850054
+acceleration  0.2903161  0.2127458
+year          1.0000000  0.1815277
+origin        0.1815277  1.0000000
+> cor(Auto[,-8])
+Error in cor(Auto[, -8]) : 'x' must be numeric
+> summary(model1)
+
+Call:
+lm(formula = mpg ~ horsepower, data = Auto)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.5710  -3.2592  -0.3435   2.7630  16.9240 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 39.935861   0.717499   55.66   <2e-16 ***
+horsepower  -0.157845   0.006446  -24.49   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.906 on 390 degrees of freedom
+Multiple R-squared:  0.6059,	Adjusted R-squared:  0.6049 
+F-statistic: 599.7 on 1 and 390 DF,  p-value: < 2.2e-16
+
+Session version 1.2.1335-1 does not match server version 1.2.1206-2 - this is an unsupported configuration, and you may experience unexpected issues as a result.
+
+R version change [3.5.2 -> 3.5.3] detected when restoring session; search path not restored
+
+>

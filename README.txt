@@ -1,0 +1,2 @@
+Trabalho feito por Gabriel Faria e Ana Maria Pego, fizemos juntos e ela fez no RStudio, porém não soube compartilhar e nem fazer em markdown, então segue código cru
+via bloco de notas, espero que não esteja (muito) feio, pois foi feito com carinho
